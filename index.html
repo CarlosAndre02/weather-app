@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <section class="app">
+      <h1 class="sr-only">Weather App</h1>
+
+      <section class="search-bar">
+        <h2 class="sr-only">Barra de pesquisa</h2>
+
+        <label class="sr-only" for="search-input">Cidade</label>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Digite o nome da cidade"
+        />
+      </section>
+      <section class="current-weather">
+        <h2 class="sr-only">Condições atuais</h2>
+
+        <div class="temperature">
+          <h3 class="temperature-city"></h3>
+          <div class="temperature-values-wrapper">
+            <p class="temperature-current"><span></span>°</p>
+            <p class="temperature-maximum mini-max-temp">⬆ <span></span>°</p>
+            <p class="temperature-minimum mini-max-temp">⬇ <span></span>°</p>
+          </div>
+          <p class="temperature-text"></p>
+        </div>
+        <div class="current-conditions">
+          <div class="conditions-group wind">
+            <h4>Velocidade do vento</h4>
+            <p><span></span>km/h</p>
+          </div>
+          <div class="conditions-group precipitation">
+            <h4>Precipitação</h4>
+            <p><span></span> mm</p>
+          </div>
+          <div class="conditions-group humidity">
+            <h4>Umidade</h4>
+            <p><span></span>%</p>
+          </div>
+          <div class="conditions-group pressure">
+            <h4>Pressão</h4>
+            <p><span></span> mb</p>
+          </div>
+          <div class="conditions-group visibility">
+            <h4>Visibilidade</h4>
+            <p><span></span> km</p>
+          </div>
+        </div>
+      </section>
+      <div class="error-message">
+        Não foi possível encontrar a cidade desejada
+      </div>
+    </section>
+    <div class="modal-overlay">
+      <div class="modal">
+        <p>Carregando...</p>
+      </div>
+    </div>
+
+    <script src="./assets/js/bundle.js"></script>
+  </body>
+</html>
